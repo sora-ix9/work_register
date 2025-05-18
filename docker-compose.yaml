@@ -1,0 +1,49 @@
+name: work_register
+
+version: '3.8'
+
+networks:
+    my_network:
+        driver: bridge
+
+volumes:
+    db_data:
+
+services:
+    app:
+        build: .
+        command: gunicorn -k gevent -w 4 --bind 0.0.0.0:5000 --certfile cert.pem --keyfile key.pem app:app
+        restart: always
+        ports:
+            - 5000:5000
+        env_file:
+            - './backend/.env'
+        depends_on:
+            - db
+        networks:
+            - my_network
+            
+    db:
+        image: postgres:16.4
+        restart: always
+        env_file:
+            - './backend/.env'
+        volumes:
+            - db_data:/var/lib/postgresql/data
+            - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+        ports:
+            - 5432:5432
+        networks:
+            - my_network
+
+    pgadmin:
+        image: dpage/pgadmin4:latest
+        restart: always
+        env_file:
+            - './backend/.env'
+        ports:
+            - 8888:80
+        depends_on:
+            - db
+        networks:
+            - my_network    

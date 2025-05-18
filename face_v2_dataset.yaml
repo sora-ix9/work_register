@@ -1,0 +1,8 @@
+path: face_v2/
+train: 'train/images'
+val: 'val/images'
+
+# class names
+names:
+  0: 'Non-employee'
+  1: 'Issara (Kao)'

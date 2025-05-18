@@ -1,0 +1,13 @@
+numpy==1.26.4
+opencv-python-headless==4.9.0.80
+openvino==2025.0.0
+ultralytics==8.3.114
+Flask==2.3.3
+Flask-Socketio==5.3.6
+psycopg2-binary==2.9.8
+Flask-SQLAlchemy==3.1.1
+Flask-Migrate==4.0.6 
+pyOpenSSL==24.3.0
+gunicorn==22.0.0
+gevent==24.11.1
+python-dotenv
