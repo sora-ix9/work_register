@@ -1,0 +1,13 @@
+./backend/temp_app.py
+backend/.env
+backend/winRun.env
+backend/cert.pem
+backend/key.pem
+commands/
+datasets/
+result/
+error_and_note/
+web_ui/
+work_register_venv/
+.dockerignore
+Designs of Facial Recognition System.pdf

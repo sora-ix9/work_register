@@ -4,9 +4,7 @@ ENV TZ=Asia/Bangkok
 
 # Copy application code into the container
 COPY ./backend /app
-COPY best_YOLOv8n_model.pt /app
-COPY ./best_openvino_model /app/best_openvino_model
-COPY requirements.txt /app
+COPY ./requirements.txt /app
 
 # Set working directory from now on
 WORKDIR /app

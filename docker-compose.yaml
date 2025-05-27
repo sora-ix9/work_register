@@ -12,7 +12,7 @@ volumes:
 services:
     app:
         build: .
-        command: gunicorn -k gevent -w 4 --bind 0.0.0.0:5000 --certfile cert.pem --keyfile key.pem app:app
+        command: gunicorn -k gevent -w 4 --bind 0.0.0.0:5000 --certfile cert.pem --keyfile key.pem app:app_obj
         restart: always
         ports:
             - 5000:5000
