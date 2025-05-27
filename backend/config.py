@@ -1,8 +1,11 @@
 import os
 import dotenv
 
-root_dir = os.path.abspath(os.path.dirname(__file__)) 
-dotenv.load_dotenv()
+root_dir = os.path.abspath(os.path.dirname(__file__))
+if os.name == 'posix':
+    dotenv.load_dotenv(override=True)
+elif os.name == 'nt':
+    dotenv.load_dotenv('winRun.env', override=True)
 
 class Config():
     DEBUG = False
