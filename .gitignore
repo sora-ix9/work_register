@@ -1,4 +1,4 @@
-./backend/temp_app.py
+backend/temp_app.py
 backend/.env
 backend/winRun.env
 backend/cert.pem
