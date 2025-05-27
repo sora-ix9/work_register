@@ -1,6 +1,4 @@
 from app import db
-from sqlalchemy.sql import func
-from sqlalchemy.dialects.postgresql import JSON
 
 class Work_register_tb(db.Model):
     __table_name__ = 'Work_register_tb'
