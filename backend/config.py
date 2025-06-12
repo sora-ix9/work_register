@@ -1,11 +1,14 @@
 import os
 import dotenv
 
+def is_running_in_docker():
+    return os.path.exists('/.dockerenv') 
+
 root_dir = os.path.abspath(os.path.dirname(__file__))
-if os.name == 'posix':
+if (os.name == 'posix') and is_running_in_docker():
     dotenv.load_dotenv(override=True)
-elif os.name == 'nt':
-    dotenv.load_dotenv('winRun.env', override=True)
+elif (os.name == 'nt') or not(is_running_in_docker()):
+    dotenv.load_dotenv('win_or_wsl.env', override=True)
 
 class Config():
     DEBUG = False

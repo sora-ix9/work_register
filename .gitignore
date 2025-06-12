@@ -1,8 +1,13 @@
+.vs/
+backend/__pycache__
 backend/temp_app.py
 backend/.env
-backend/winRun.env
+backend/win_or_wsl.env
+backend/work_register_nginx.conf
 backend/cert.pem
-backend/key.pem
+backend/key.pem 
+backend/model_warmUp_35.jpg
+backend/model_warmUp_34.jpg
 commands/
 datasets/
 result/
