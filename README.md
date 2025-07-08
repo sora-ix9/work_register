@@ -2,6 +2,8 @@
 The system composes two-key components, i.e. web client and web server, where web client is responsible for fetching raw images from user camera and displaying face-detected images received from web server. On the other hand, web server is responsible for detecting faces on images received from web client by using YOLOv8n model.  Lastly, both web client and server perform their task in real-time using WebSocket protocol implemented with Socket.IO and Flask-SocketIO, respectively.
 ## How Does the System Work
 ![](https://github.com/sora-ix9/work_register/blob/main/diagram_and_screenshots/diagram.png?raw=true)
+## Model building
+Model building is shown in the notebook named YOLOv8n_face_detection.ipynb. For more organized display, please directly enter on Colab through the link [here](https://colab.research.google.com/github/sora-ix9/work_register/blob/main/YOLOv8n_face_detection.ipynb).
 ## Screenshots
 ![](https://github.com/sora-ix9/work_register/blob/main/diagram_and_screenshots/screenshot1.png?raw=true)
 ![](https://github.com/sora-ix9/work_register/blob/main/diagram_and_screenshots/screenshot2.png?raw=true)
