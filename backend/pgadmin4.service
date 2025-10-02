@@ -1,0 +1,15 @@
+# Copy this file to /etc/systemd/system/pgadmin4.service
+
+[Unit]
+Description=pgAdmin4
+After=network.target
+
+[Service]
+User=your_username
+Group=your_groupname
+WorkingDirectory=/path/to/your/pgadmin4/in/virtual/environment  
+ExecStart=/path/to/your/python /path/to/your/pgadmin4_python_file/in/virtual/environment
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
